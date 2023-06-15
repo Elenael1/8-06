@@ -1,0 +1,32 @@
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 15px;
+}
+
+.list-item {
+    list-style: none;
+    margin: 0 auto;
+    background-color: cornflowerblue;
+    border: 2px dashed red;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.list-container li {
+    animation: slideIn 0.5s ease-in-out;
+}
